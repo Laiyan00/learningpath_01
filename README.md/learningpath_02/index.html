@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudHost — Paket Layanan & Checkout</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER & SAKELAR HARGA (ASPEK 1) -->
+  <header class="header">
+    <h1>Pilih Paket Hosting Anda</h1>
+    <p>Mulai bangun website impian Anda dengan performa cepat dan harga transparan.</p>
+
+    <div class="sakelar-wadah">
+      <span id="labelBulanan" class="label-aktif">Bulanan</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleDurasi">
+        <span class="slider"></span>
+      </label>
+      <span id="labelTahunan">Tahunan <span class="badge-diskon">Hemat 20%</span></span>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- 1. GRID 3 KARTU PAKET -->
+    <section class="grid-paket">
+      
+      <!-- KARTU 1: STARTER -->
+      <article class="kartu">
+        <h2>Starter</h2>
+        <p class="deskripsi">Cocok untuk proyek belajar dan portofolio pribadi.</p>
+        <div class="harga">
+          <span class="mata-uang">Rp</span><span class="angka-harga" data-bulanan="25.000" data-tahunan="20.000">25.000</span><span class="periode">/bulan</span>
+        </div>
+        <ul class="fitur">
+          <li class="ada">✓ 1 Website</li>
+          <li class="ada">✓ Penyimpanan 10 GB SSD</li>
+          <li class="ada">✓ Sertifikat SSL Gratis</li>
+          <li class="tidak">✕ Domain Gratis</li>
+          <li class="tidak">✕ Backup Harian Otomatis</li>
+        </ul>
+        <button class="btn btn-sekunder btn-pilih" data-paket="Starter" data-bulanan="25.000" data-tahunan="240.000">Pilih Paket</button>
+      </article>
+
+      <!-- KARTU 2: PRO (UNGGULAN) -->
+      <article class="kartu unggulan">
+        <span class="lencana-populer">Paling Populer</span>
+        <h2>Pro Developer</h2>
+        <p class="deskripsi">Pilihan terbaik untuk freelancer dan website bisnis aktif.</p>
+        <div class="harga">
+          <span class="mata-uang">Rp</span><span class="angka-harga" data-bulanan="65.000" data-tahunan="52.000">65.000</span><span class="periode">/bulan</span>
+        </div>
+        <ul class="fitur">
+          <li class="ada">✓ Hingga 10 Website</li>
+          <li class="ada">✓ Penyimpanan 50 GB NVMe</li>
+          <li class="ada">✓ Sertifikat SSL Gratis</li>
+          <li class="ada">✓ Gratis Domain .com (1 Tahun)</li>
+          <li class="tidak">✕ Server Dedikasi Khusus</li>
+        </ul>
+        <button class="btn btn-utama btn-pilih" data-paket="Pro Developer" data-bulanan="65.000" data-tahunan="624.000">Pilih Paket</button>
+      </article>
+
+      <!-- KARTU 3: BUSINESS -->
+      <article class="kartu">
+        <h2>Business</h2>
+        <p class="deskripsi">Performa maksimal untuk toko online dan aplikasi besar.</p>
+        <div class="harga">
+          <span class="mata-uang">Rp</span><span class="angka-harga" data-bulanan="149.000" data-tahunan="119.000">149.000</span><span class="periode">/bulan</span>
+        </div>
+        <ul class="fitur">
+          <li class="ada">✓ Unlimited Website</li>
+          <li class="ada">✓ Penyimpanan 200 GB NVMe</li>
+          <li class="ada">✓ Sertifikat SSL Wildcard</li>
+          <li class="ada">✓ Gratis Domain & Email Bisnis</li>
+          <li class="ada">✓ Backup Harian Otomatis</li>
+        </ul>
+        <button class="btn btn-sekunder btn-pilih" data-paket="Business" data-bulanan="149.000" data-tahunan="1.428.000">Pilih Paket</button>
+      </article>
+
+    </section>
+
+    <!-- 2. TABEL PERBANDINGAN SPESIFIKASI (ASPEK 4) -->
+    <section class="blok-bawah">
+      <h2 class="judul-tengah">Perbandingan Spesifikasi Teknis</h2>
+      <div class="wadah-tabel">
+        <table class="tabel-spek">
+          <thead>
+            <tr>
+              <th>Fitur Teknis</th>
+              <th>Starter</th>
+              <th class="kolom-pro">Pro Developer</th>
+              <th>Business</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kapasitas RAM</td>
+              <td>1 GB</td>
+              <td class="kolom-pro">4 GB</td>
+              <td>16 GB</td>
+            </tr>
+            <tr>
+              <td>Core CPU</td>
+              <td>1 vCPU</td>
+              <td class="kolom-pro">2 vCPU</td>
+              <td>6 vCPU</td>
+            </tr>
+            <tr>
+              <td>Database MySQL / PostgreSQL</td>
+              <td>2 Database</td>
+              <td class="kolom-pro">20 Database</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Akses SSH & Git Deploy</td>
+              <td>✕</td>
+              <td class="kolom-pro">✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Dukungan Teknis 24/7</td>
+              <td>Email</td>
+              <td class="kolom-pro">Live Chat Prioritas</td>
+              <td>Manajer Akun Khusus</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. FAQ ACCORDION (ASPEK 2) -->
+    <section class="blok-bawah faq-section">
+      <h2 class="judul-tengah">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+      
+      <details class="faq-item">
+        <summary>Apakah saya bisa upgrade paket di kemudian hari?</summary>
+        <p>Tentu saja. Anda dapat meningkatkan paket dari Starter ke Pro atau Business kapan saja langsung dari dasbor tanpa downtime pada website Anda.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Bagaimana cara klaim domain gratis pada paket Pro & Business?</summary>
+        <p>Setelah pembayaran terkonfirmasi untuk siklus tahunan, Anda dapat langsung mendaftarkan nama domain .com atau .id secara gratis selama 1 tahun pertama.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Apakah ada garansi uang kembali?</summary>
+        <p>Kami memberikan garansi uang kembali 100% dalam 30 hari pertama jika Anda merasa performa server kami tidak sesuai dengan kebutuhan proyek Anda.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- 4. MODAL CHECKOUT PESANAN (ASPEK 3) -->
+  <div id="modalCheckout" class="modal-overlay" hidden>
+    <div class="modal-kotak">
+      <div class="modal-header">
+        <h3>Ringkasan Pesanan</h3>
+        <button id="tutupModal" class="btn-tutup">&times;</button>
+      </div>
+      
+      <div class="ringkasan-box">
+        <div>Paket Dipilih: <strong id="checkoutPaket" class="teks-toska">-</strong></div>
+        <div>Siklus Tagihan: <strong id="checkoutSiklus">Bulanan</strong></div>
+        <div class="total-baris">Total Bayar: <strong id="checkoutTotal">Rp 0</strong></div>
+      </div>
+
+      <form id="formOrder">
+        <div class="grup-input">
+          <label for="inputDomain">Nama Domain yang Diinginkan</label>
+          <input type="text" id="inputDomain" required placeholder="contoh: namakamu.com">
+        </div>
+        <div class="grup-input">
+          <label for="inputNama">Nama Lengkap Anda</label>
+          <input type="text" id="inputNama" required placeholder="Budi Santoso">
+        </div>
+        <button type="submit" class="btn btn-utama">Lanjut Pesan via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
